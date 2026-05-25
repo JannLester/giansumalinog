@@ -90,8 +90,10 @@
                 <input type="text" id="otpInput" placeholder="Enter 6-digit code" maxlength="6" style="text-align: center; font-size: 1.5rem; letter-spacing: 5px;">
                 <div class="error-msg" id="otpError"></div>
             </div>
-            <button id="verifyOtpBtn" class="close-success-btn">Verify & Send</button>
-            <button class="close-otp-btn" style="background: transparent; color: #ccc; border: none; margin-top: 10px; cursor: pointer;">Cancel</button>
+            <div style="display: flex; gap: 10px; width: 100%;">
+                <button id="verifyOtpBtn" class="close-success-btn" style="flex: 1; padding: 0.8rem; margin: 0;">Verify & Send</button>
+                <button class="close-otp-btn" style="flex: 1; padding: 0.8rem; background: transparent; color: #ccc; border: 1px solid #444; border-radius: 4px; cursor: pointer; font-weight: 600; transition: background 0.2s;">Cancel</button>
+            </div>
         </div>
     </div>
 
