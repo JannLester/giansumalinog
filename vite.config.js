@@ -5,7 +5,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        about: 'about.html',
+        projects: 'projects.html',
         cProgramming: 'c-programming.html',
         contact: 'contact.html',
         java: 'java.html',
