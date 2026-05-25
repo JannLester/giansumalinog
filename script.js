@@ -136,10 +136,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 isValid = false;
             }
             
-            // Email validation
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(emailInput.value)) {
-                emailError.textContent = "Please enter a valid email address.";
+            // Email validation (only @gmail.com)
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/i;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                emailError.textContent = "Please enter a valid @gmail.com address.";
                 emailInput.classList.add("input-error");
                 isValid = false;
             }
