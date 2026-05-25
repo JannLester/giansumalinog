@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="/script.js"></script>
 </head>
+
 <body>
     <!-- Navigation Section -->
     <nav>
@@ -18,35 +20,89 @@
             <div class="links">
                 <div class="link"><a href="index.html">Home</a></div>
                 <div class="link"><a href="skills.html">Skills</a></div>
-                <div class="link"><a href="about.html">About</a></div>
+                <div class="link"><a href="projects.html">Projects</a></div>
                 <div class="link"><a href="contact.html" class="active">Contact</a></div>
             </div>
-            
+
             <!-- CONTACT CONTENT -->
-            <div class="content">
-                <div class="title">
-                    <span>Need My Expertise?</span>
+            <div class="content contact-content-custom">
+                <div class="contact-header">
+                    <div class="title"><span>Get in Touch</span></div>
+                    <p class="contact-desc">Feel free to reach out for collaborations, project opportunities, or simply
+                        to connect. I’m always open to learning, building meaningful projects, and working with people
+                        who are passionate about technology, development, and innovation.</p>
                 </div>
-                <div class="text">
-                    <div class="topic">-</div>
-                    <p>As a dedicated IT student with a strong foundation in java programming, networking, and web development, I am passionate about applying my knowledge to solve real-world challenges. My academic journey has equipped me with a solid understanding of emerging technologies, and I am eager to bring fresh ideas and innovative solutions to your projects.</p>
-                    <div class="button">
-                        <button>Contact Me</button>
+
+                <div class="contact-grid">
+                    <!-- Left Form Area -->
+                    <div class="contact-form-card">
+                        <div class="form-header">
+                            <h3>Send me a Message</h3>
+                        </div>
+                        <form id="contactForm" action="https://formspree.io/f/mkoeqnjl" method="POST">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Surname, Name</label>
+                                    <input type="text" name="name" id="nameInput" placeholder="Doe, John" required>
+                                    <div class="error-msg" id="nameError"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" name="email" id="emailInput" placeholder="john@example.com" required>
+                                    <div class="error-msg" id="emailError"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea name="message" id="messageInput" placeholder="Enter your message sequence here.."
+                                    required></textarea>
+                                <div class="error-msg" id="messageError"></div>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" class="submit-btn">Submit <i class="fa-solid fa-play"
+                                        style="font-size: 0.8rem; margin-left: 5px;"></i></button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            
+
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
         <div class="dropdown">
             <div class="links">
                 <a href="index.html">Home</a>
                 <a href="skills.html">Skills</a>
-                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
                 <a href="contact.html" class="active">Contact</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
     </nav>
+
+    <!-- OTP Verification Modal -->
+    <div id="otp-modal" class="modal-overlay">
+        <div class="modal-content-box">
+            <i class="fa-solid fa-envelope-open-text success-icon" style="color: #2E5BFF;"></i>
+            <h2>Verification Required</h2>
+            <p>We've sent a 6-digit code to your email. Please enter it below to verify your identity.</p>
+            <div class="form-group" style="text-align: left; margin-bottom: 1.5rem;">
+                <input type="text" id="otpInput" placeholder="Enter 6-digit code" maxlength="6" style="text-align: center; font-size: 1.5rem; letter-spacing: 5px;">
+                <div class="error-msg" id="otpError"></div>
+            </div>
+            <button id="verifyOtpBtn" class="close-success-btn">Verify & Send</button>
+            <button class="close-otp-btn" style="background: transparent; color: #ccc; border: none; margin-top: 10px; cursor: pointer;">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content-box">
+            <i class="fa-solid fa-circle-check success-icon"></i>
+            <h2>Message Sent!</h2>
+            <p>Thanks for reaching out. I'll get back to you as soon as possible.</p>
+            <button class="close-success-btn">Close</button>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="/script.js"></script>
 </head>
+
 <body>
     <!-- Navigation Section -->
     <nav>
@@ -18,73 +20,84 @@
             <div class="links">
                 <div class="link"><a href="index.html">Home</a></div>
                 <div class="link"><a href="skills.html" class="active">Skills</a></div>
-                <div class="link"><a href="about.html">About</a></div>
+                <div class="link"><a href="projects.html">Projects</a></div>
                 <div class="link"><a href="contact.html">Contact</a></div>
             </div>
-            
+
             <!-- SKILL CONTENT -->
-            <div class="content">
-                <div class="title"><span>MY SKILLS</span></div>
-                <div class="skills-details">
-                    <!-- Left Box (Text and Description) -->
-                    <div class="skills-box left">
-                        <div class="topic">My Skills Reflect My Expertise</div>
-                        <div class="paragraph-container">
-                            <p data-aos="fade-left" class="skill-paragraph">
-                                "And efforts are painstaking always, since you are into this mystical universe to practice a technique, every learning is a slow process.
-                            </p>
-                            <p data-aos="fade-left" class="skill-paragraph">
-                                Gradually you will master it by time and if you are able to grasp things more quickly in a limited spell, as your experience is advancing, you are almost nearing to be a maestro.
-                            </p>
-                            <p data-aos="fade-left" class="skill-paragraph">
-                                Our world doesn't need incompetence anymore, but needs high skills or talents to do the job done quickly with desire and ambition."
-                            </p>
-                            <p class="quote-author">― Nithin Purple</p>
+            <div class="content skills-content-custom">
+                <div class="tech-stack-header">
+                    <div class="title"><span>Technical Stack</span></div>
+                    <p class="skill-desc">A reflection of my technical skills and experiences built through
+                        hands-on projects, continuous learning, and working in fast-paced development environments. I
+                        focus on building scalable and reliable systems while creating smooth and user-friendly
+                        experiences across web, mobile, and software applications.</p>
+                </div>
+                <div class="tech-stack-grid">
+                    <!-- Languages -->
+                    <div class="tech-card languages-card">
+                        <h3>Languages</h3>
+                        <div class="tags-grid">
+                            <span class="tag">Java</span>
+                            <span class="tag">JS</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">DART</span>
                         </div>
                     </div>
-    
-                    <!-- Right Box (Experience & Skill Progress) -->
-                    <div class="skills-box right">
-                        <div class="experience stacked">
-                            <div class="num">MY SAMPLE WORKS</div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="tech-card tools-card">
+                        <h3>Tools & Platforms</h3>
+                        <div class="tags-grid flex-tags">
+                            <span class="tag flex-tag">Unity</span>
+                            <span class="tag flex-tag">Vercel</span>
+                            <span class="tag flex-tag">Render</span>
+                            <span class="tag flex-tag">Git</span>
+                            <span class="tag flex-tag">Github</span>
+                            <span class="tag flex-tag">Firebase</span>
+                            <span class="tag flex-tag">Claude</span>
                         </div>
-                        <div class="boxes">
-                            <a href="packet-tracer.html" class="box-link">
-                                <button class="box">
-                                    <div class="topic">Packet Tracer</div>
-                                </button>
-                            </a>
-                            <a href="java.html" class="box-link">
-                                <button class="box">
-                                    <div class="topic">Java</div>
-                                </button>
-                            </a>
-                            <a href="web.html" class="box-link">
-                                <button class="box">
-                                    <div class="topic">Web</div>
-                                </button>
-                            </a>
-                            <a href="c-programming.html" class="box-link">
-                                <button class="box">
-                                    <div class="topic">C</div>
-                                </button>
-                            </a>
+                    </div>
+
+                    <!-- Frameworks -->
+                    <div class="tech-card frameworks-card">
+                        <h3>Frameworks</h3>
+                        <div class="tags-grid fw-grid">
+                            <span class="tag">React</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Fast API</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                    </div>
+
+                    <!-- Methodologies -->
+                    <div class="tech-card methodologies-card">
+                        <h3>Methodologies</h3>
+                        <div class="tags-grid">
+                            <span class="tag">Agile</span>
+                            <span class="tag">Scrum</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
         </div>
         <div class="dropdown">
             <div class="links">
                 <a href="index.html">Home</a>
                 <a href="skills.html" class="active">Skills</a>
-                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
                 <a href="contact.html">Contact</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
     </nav>
 </body>
+
 </html>
